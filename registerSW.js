@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/my-pomodoro-timer/sw.js', { scope: '/my-pomodoro-timer/' })})}
