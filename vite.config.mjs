@@ -13,7 +13,8 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  // ⚠️ 注意：這裡改成你的 GitHub 倉庫名稱，前後都要有斜線
+  base: '/my-pomodoro-timer/',
   plugins: [
     Vue({
       template: { transformAssetUrls },
@@ -72,8 +73,9 @@ export default defineConfig({
         theme_color: '#bf7956',
         background_color: '#bf7956',
         display: 'standalone',
-        start_url: './',
-        scope: './',
+        // ⚠️ PWA 的路徑也要跟著 base 修改，確保手機安裝後能正確開啟
+        start_url: '/my-pomodoro-timer/',
+        scope: '/my-pomodoro-timer/',
       },
     }),
     VitePluginRadar({
